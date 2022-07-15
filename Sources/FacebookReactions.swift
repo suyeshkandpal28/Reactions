@@ -32,27 +32,27 @@ extension Reaction {
   public struct facebook {
     /// The facebook's "like" reaction.
     public static var like: Reaction {
-      return reactionWithId("like")
+      return reactionWithId("Like")
     }
 
     /// The facebook's "love" reaction.
     public static var love: Reaction {
-      return reactionWithId("love")
+      return reactionWithId("Love")
     }
 
     /// The facebook's "haha" reaction.
     public static var haha: Reaction {
-      return reactionWithId("haha")
+      return reactionWithId("Clap")
     }
 
     /// The facebook's "wow" reaction.
     public static var wow: Reaction {
-      return reactionWithId("wow")
+      return reactionWithId("Celebrate")
     }
 
     /// The facebook's "sad" reaction.
     public static var sad: Reaction {
-      return reactionWithId("sad")
+      return reactionWithId("Support")
     }
 
     /// The facebook's "angry" reaction.
@@ -61,7 +61,7 @@ extension Reaction {
     }
 
     /// The list of standard facebook reactions in this order: `.like`, `.love`, `.haha`, `.wow`, `.sad`, `.angry`.
-    public static let all: [Reaction] = [facebook.like, facebook.love, facebook.haha, facebook.wow, facebook.sad, facebook.angry]
+    public static let all: [Reaction] = [facebook.like, facebook.love, facebook.haha, facebook.sad, facebook.wow ]
 
     // MARK: - Convenience Methods
 
@@ -70,13 +70,17 @@ extension Reaction {
       var alternativeIcon: UIImage? = nil
 
       switch id {
-      case "like":
-        color           = UIColor(red: 0.29, green: 0.54, blue: 0.95, alpha: 1)
-        alternativeIcon = imageWithName("like-template").withRenderingMode(.alwaysTemplate)
-      case "love":
-        color = UIColor(red: 0.93, green: 0.23, blue: 0.33, alpha: 1)
-      case "angry":
-        color = UIColor(red: 0.96, green: 0.37, blue: 0.34, alpha: 1)
+      case "Like":
+        color           = #colorLiteral(red: 0.1263153851, green: 0.1618461013, blue: 0.4399832487, alpha: 1)
+        alternativeIcon = imageWithName("GrayLike").withRenderingMode(.alwaysTemplate)
+      case "Love":
+          color = #colorLiteral(red: 1, green: 0, blue: 0.3095907271, alpha: 1)
+      case "Clap":
+          color = #colorLiteral(red: 0.2509803922, green: 0.7960784314, blue: 0.3411764706, alpha: 1)
+      case "Support":
+          color = #colorLiteral(red: 0.2039215686, green: 0.6666666667, blue: 0.862745098, alpha: 1)
+      case "Celebrate":
+          color = #colorLiteral(red: 0.1830490232, green: 0.5008765459, blue: 0.9294117647, alpha: 1)
       default:
         color = UIColor(red: 0.99, green: 0.84, blue: 0.38, alpha: 1)
       }

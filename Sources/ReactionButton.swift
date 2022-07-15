@@ -241,7 +241,7 @@ public final class ReactionButton: UIReactionControl {
 
     switch config.alignment {
     case .left:
-      selector.center = CGPoint(x: centerPoint.x + (selector.bounds.width - bounds.width) / 2, y: centerPoint.y)
+      selector.center = CGPoint(x: centerPoint.x + (selector.bounds.width - bounds.width) / 2, y: centerPoint.y + 20)
     case .right:
       selector.center = CGPoint(x: centerPoint.x - (selector.bounds.width - bounds.width) / 2, y: centerPoint.y)
     default:
