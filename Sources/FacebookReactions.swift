@@ -72,7 +72,7 @@ extension Reaction {
       switch id {
       case "Like":
         color           = #colorLiteral(red: 0.1263153851, green: 0.1618461013, blue: 0.4399832487, alpha: 1)
-        alternativeIcon = imageWithName("GrayLike").withRenderingMode(.alwaysTemplate)
+        //alternativeIcon = imageWithName("GrayLike").withRenderingMode(.alwaysTemplate)
       case "Love":
           color = #colorLiteral(red: 1, green: 0, blue: 0.3095907271, alpha: 1)
       case "Clap":
