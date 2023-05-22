@@ -89,7 +89,10 @@ extension Reaction {
     }
 
     private static func imageWithName(_ name: String) -> UIImage {
-      return UIImage(named: name, in: .reactionsBundle(), compatibleWith: nil)!
-    }
+        if let image = UIImage(named: name, in: .reactionsBundle(), compatibleWith: nil) {
+            return image
+        }
+        return UIImage()
+      }
   }
 }
